@@ -24,7 +24,7 @@ if ((process.env.MODE = 'development')) {
   app.use(morgan('dev'));
 }
 
-dotenv.config({ path: path.join(__dirname, 'config', 'config.env') });
+dotenv.config({ path: path.join(__dirname, '.env') });
 app.use(express.static(path.join(__dirname, 'src', 'public')));
 app.use(express.json());
 
