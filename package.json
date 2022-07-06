@@ -5,6 +5,7 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "data:import": "DEBUG=app:seeder node seeder.js -import",
     "start": "node server.js",
     "dev": "DEBUG=app:* nodemon server.js"
   },
