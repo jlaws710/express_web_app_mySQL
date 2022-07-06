@@ -4,6 +4,19 @@ const colors = require('colors');
 const morgan = require('morgan');
 const dotenv = require('dotenv');
 const path = require('path');
+const sequelize = require('./src/db');
+
+//check database connection
+sequelize
+  .authenticate()
+  .then((res) => debug(colors.blue.inverse('Database is connected')))
+  .catch((err) => {
+    debug(
+      colors.red.inverse('There was an error connecting to the database'),
+      err
+    );
+    process.exit(1);
+  });
 
 const app = express();
 

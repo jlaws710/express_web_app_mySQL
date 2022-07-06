@@ -7,9 +7,4 @@ const sequelize = new Sequelize('test_AMEX_1', 'root', '', {
   dialect: 'mysql',
 });
 
-// sequelize
-//   .authenticate()
-//   .then((res) => debug('We are connected!'))
-//   .catch((err) => debug('There was an error', err));
-
 module.exports = sequelize;
