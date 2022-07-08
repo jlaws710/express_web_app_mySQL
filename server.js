@@ -6,6 +6,8 @@ const dotenv = require('dotenv');
 const path = require('path');
 const sequelize = require('./src/db');
 
+const routes = require('./src/routes/index.js');
+
 //check database connection
 sequelize
   .authenticate()
@@ -28,7 +30,8 @@ dotenv.config({ path: path.join(__dirname, '.env') });
 app.use(express.static(path.join(__dirname, 'src', 'public')));
 app.use(express.json());
 
-const PORT = process.env.PORT || 5000;
+app.use('/api', routes);
+const PORT = process.env.PORT || 8000;
 
 const server = app.listen(
   PORT,

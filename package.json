@@ -14,8 +14,10 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.18.1",
+    "express-validator": "^6.14.2",
     "mysql2": "^2.3.3",
-    "sequelize": "^6.21.2"
+    "sequelize": "^6.21.2",
+    "validator": "^13.7.0"
   },
   "devDependencies": {
     "colors": "^1.4.0",
